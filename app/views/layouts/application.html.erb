@@ -31,7 +31,13 @@
   </div><!-- /.navbar-collapse -->
 </nav>
 
-<%= yield %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9"><%= yield %></div>
+    <div class="col-sm-3">side bar</div>
+  </div>
+</div>
+
 
 </body>
 </html>
