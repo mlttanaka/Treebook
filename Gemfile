@@ -33,3 +33,4 @@ group :doc do
 end
 
 gem 'bootstrap-sass'
+gem 'devise'
