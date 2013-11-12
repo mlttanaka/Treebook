@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
-// Loads all Bootstrap javascripts
-//= require bootstrap
 //= require_tree .
+
+$(document).foundation();
