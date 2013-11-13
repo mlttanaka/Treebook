@@ -6,7 +6,13 @@ class User < ActiveRecord::Base
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :profile_name, presence: true
+  validates :profile_name, presence: true,
+                           uniqueness: true,
+                           format: {
+                             with: /\A(?=.*[a-z])[a-z\d]+\Z/i,
+                             on: :create,
+                             message: "must be formatted correctly."
+                           }
 
   has_many :statuses
 
