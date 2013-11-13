@@ -1,4 +1,4 @@
-<% foundation_flash_map = { notice: 'success',
+<% foundation_alerts = { notice: 'success',
                             alert: 'standard',
                             error: 'alert',
                             secondary: 'secondary'
@@ -6,7 +6,7 @@
 
 <% if flash %>
   <% flash.each do |type, message| %>
-    <div data-alert class="alert-box #{ foundation_flash_map[type] } radius">
+    <div data-alert class="alert-box <%= foundation_alerts[type] %> radius">
       <%= message %>
       <%= link_to "x", "#", class: "close" %>
     </div>
