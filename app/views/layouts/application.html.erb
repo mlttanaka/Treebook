@@ -64,12 +64,17 @@
       </section>
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <% if flash[:alert] %>
+    <div class="alert-box radius">
+      <%= flash[:alert] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
 
     <section class="main">
       <div class="row">
         <div class="large-12 columns">
+          <%= render 'layouts/flashes' %>
           <%= yield %>
         </div>
       </div>

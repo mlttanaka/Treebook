@@ -1,0 +1,13 @@
+<% foundation_flash_map = { notice: 'success',
+                            alert: 'standard',
+                            error: 'alert',
+                            secondary: 'secondary'
+} %>
+
+<% flash.each do |type, message| %>
+  <div data-alert class="alert-box #{ foundation_flash_map[type] } radius">
+    <%= message %>
+    <%= link_to "x", "#", class: "close" %>
+  </div>
+<% end %>
+
