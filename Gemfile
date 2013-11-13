@@ -33,6 +33,7 @@ gem 'coffee-rails', '~> 4.0.0'  # Use CoffeeScript for .js.coffee assets and vie
 gem 'uglifier', '>= 1.3.0'  # Use Uglifier as compressor for JavaScript assets
 gem 'compass-rails' # Zurb Foundation needs this.
 gem 'zurb-foundation', '~> 4.0.0'  #SCSS prettiness
+gem 'foundation-icons-sass-rails'
 
 # Other things I've added
 gem 'devise'
