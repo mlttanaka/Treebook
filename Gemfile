@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-
-
+ruby "2.0.0"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -26,6 +25,12 @@ group :development do
   gem 'better_errors'
   gem 'sqlite3' # Use sqlite3 as the database for Active Record
 end
+
+group :production do
+  gem 'pg' # Heroku deployment
+  gem 'rails_12factor' # Heroku deployment
+end
+
 
 # For Rails Assets
 gem 'sass-rails', '~> 4.0.0'  # Use SCSS for stylesheets
