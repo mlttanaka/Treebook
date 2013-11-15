@@ -40,10 +40,9 @@
           <li class=""><%= link_to "All statuses", statuses_path %></li>
           <% if user_signed_in? %>
             <li class="divider"></li>
-            <li class=""><%= link_to "My statuses",
-                                     controller: 'profiles',
-                                     action: :show,
-                                     :id => current_user.profile_name %></li>
+            <li class="">
+              <%= link_to "My statuses", profiles_path(current_user) %>
+            </li>
           <% end %>
         </ul>
         <!-- Right Nav Section -->
@@ -54,15 +53,15 @@
             </li>
             <li class="divider"></li>
             <li class="">
-              <%= link_to "Log Out", sign_out_path, method: :delete %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
             </li>
           <% else %>
             <li class="">
-              <%= link_to "Log In", sign_in_path %>
+              <%= link_to "Log In", new_user_session_path %>
             </li>
             <li class="divider"></li>
             <li class="">
-              <%= link_to "Register", register_path %>
+              <%= link_to "Register", new_user_registration_path %>
             </li>
           <% end %>
 
