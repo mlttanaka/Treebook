@@ -13,4 +13,5 @@ Treebook::Application.routes.draw do
 
   root "statuses#index"
 
+  get ':id', to: 'profiles#show'
 end

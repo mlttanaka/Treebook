@@ -7,3 +7,7 @@ one:
 two:
   content: MyText
   user: tester_one
+
+three:
+  content: MyText
+  user: tester_two

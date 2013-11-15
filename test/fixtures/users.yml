@@ -10,3 +10,10 @@ tester_one:
   profile_name: "Tester1"
   email:  "Tester.one@test.com"
   encrypted_password: "password"
+
+tester_two:
+  first_name: "Tester"
+  last_name: "Two"
+  profile_name: "Tester2"
+  email:  "Tester.two@test.com"
+  encrypted_password: "password"
