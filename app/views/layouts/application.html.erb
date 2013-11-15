@@ -38,7 +38,13 @@
         <ul class="left">
           <li class="divider"></li>
           <li class=""><%= link_to "All statuses", statuses_path %></li>
-          <li class="divider"><a href="#" id="all">Link</a></li>
+          <% if user_signed_in? %>
+            <li class="divider"></li>
+            <li class=""><%= link_to "My statuses",
+                                     controller: 'profiles',
+                                     action: :show,
+                                     :id => current_user.profile_name %></li>
+          <% end %>
         </ul>
         <!-- Right Nav Section -->
         <ul class="right">
@@ -63,13 +69,6 @@
         </ul>
       </section>
     </nav>
-
-<!--   <% if flash[:alert] %>
-    <div class="alert-box radius">
-      <%= flash[:alert] %>
-      <a href="#" class="close">&times;</a>
-    </div>
-  <% end %> -->
 
     <section class="main">
       <div class="row">
